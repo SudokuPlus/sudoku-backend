@@ -1,0 +1,27 @@
+<%= form_with(model: incomplete_puzzle, local: true) do |form| %>
+  <% if incomplete_puzzle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(incomplete_puzzle.errors.count, "error") %> prohibited this incomplete_puzzle from being saved:</h2>
+
+      <ul>
+      <% incomplete_puzzle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :incompletePuzzle %>
+    <%= form.number_field :incompletePuzzle %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

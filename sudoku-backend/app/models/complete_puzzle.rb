@@ -1,0 +1,2 @@
+class CompletePuzzle < ApplicationRecord
+end

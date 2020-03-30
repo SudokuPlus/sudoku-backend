@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @incomplete_puzzle.user_id %>
+</p>
+
+<p>
+  <strong>Incompletepuzzle:</strong>
+  <%= @incomplete_puzzle.incompletePuzzle %>
+</p>
+
+<%= link_to 'Edit', edit_incomplete_puzzle_path(@incomplete_puzzle) %> |
+<%= link_to 'Back', incomplete_puzzles_path %>

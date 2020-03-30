@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Complete Puzzles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Completepuzzle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @complete_puzzles.each do |complete_puzzle| %>
+      <tr>
+        <td><%= complete_puzzle.user_id %></td>
+        <td><%= complete_puzzle.completePuzzle %></td>
+        <td><%= link_to 'Show', complete_puzzle %></td>
+        <td><%= link_to 'Edit', edit_complete_puzzle_path(complete_puzzle) %></td>
+        <td><%= link_to 'Destroy', complete_puzzle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Complete Puzzle', new_complete_puzzle_path %>
